@@ -1,83 +1,66 @@
+:root{
+    --col1: #222831;
+    --col2: #393E46;
+    --col3: #EEEEEE;
+    --col4: #00ADB5;
+}
+*{margin: 0; padding: 0;}
 body, html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
-
-header, main, footer {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
+header, main, footer{
+    float: left;
+    font-size: 1.1rem;
 }
 
-
-header {
-    background-color: #192a3e;
-    color: #fff;
+header{
+    width: 30vw;
+    height: 100vh;
+    background-color:var(--col3);
+    color: var(--col1);
+}
+main{
+    width: 60vw;
+    height: 100vh;
+    background-color:var(--col2);
+    color: var(--col3);
+}
+footer{
+    width: 10vw;
+    height: 100vh;
+    background-color:var(--col1);
+    color: var(--col3);
 }
 
-
-main {
-    background-color: #2ecc71;
-    color: #fff;
-    display: flex;
-    height: 110%;
-    flex-direction: column;
-    align-items: center;
+a{
+    color: var(--col4);
+    font-size: 2rem;
+    text-decoration: none;
 }
 
-
-footer {
-    background-color: #3498db;
-    color: #fff;
-    height: 112.5%;
+@media (max-width:768px){
+    header{
+        width: 100vw;
+        height: 30vh;
+    }
+    main{
+        width: 100vw;
+        height: 50vh;
+    }
+    footer{
+        width: 100vw;
+        height: 20vh;
+    }
+    header, main, footer{
+        font-size: 0.8rem;
+    }
 }
 
-
-/* Style for column buttons */
-.column-button {
-background-color: #186696;
-color: #fff;
-border: 0px solid #2ecc71;
-border-radius: 0px;
-font-size: 28px;
-cursor: pointer;
-transition: background-color 0.5s ease;
-width: 33.33%;
-height: 110%;
-float: left;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-
-.column-button:hover {
-    background-color: #154360;
-    color: #fff;
-}
-.button-text {
-transition: transform 0.75s ease;
-}
-.button-desc {
-display: none;
-transition: opacity 0.75s ease;
-}
-.column-button:hover .button-desc {
-display: block;
-opacity: 1;
-}
-
-
-/* Arrange buttons in three columns */
-.column-container {
-    display: flex;
-    height: 110%;
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
+@media (min-width:1440px){
+    header, main, footer{
+        font-size: 1.5rem;
+    }
 }
